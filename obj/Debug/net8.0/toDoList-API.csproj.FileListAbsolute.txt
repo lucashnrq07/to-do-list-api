@@ -31,3 +31,4 @@
 /home/lucas/Documentos/proj/toDoList-API/obj/Debug/net8.0/toDoList-API.pdb
 /home/lucas/Documentos/proj/toDoList-API/obj/Debug/net8.0/toDoList-API.genruntimeconfig.cache
 /home/lucas/Documentos/proj/toDoList-API/obj/Debug/net8.0/ref/toDoList-API.dll
+/home/lucas/Documentos/proj/toDoList-API/obj/Debug/net8.0/toDoList-API.sourcelink.json
