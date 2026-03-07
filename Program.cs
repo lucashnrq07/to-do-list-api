@@ -1,4 +1,6 @@
 using Microsoft.AspNetCore.Mvc.ModelBinding.Binders;
+using Microsoft.EntityFrameworkCore;
+using ToDoListAPI.Data;
 using ToDoListAPI.Services;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -10,8 +12,12 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-// Dependency Injection
-builder.Services.AddSingleton<TaskService>();
+var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+
+builder.Services.AddDbContext<AppDbContext>(options =>
+options.UseNpgsql(connectionString));
+
+builder.Services.AddScoped<TaskService>();
 
 var app = builder.Build();
 
